@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cybersecurity Roadmap</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <div class="logo">
+            <img src="logo.jpg" alt="Cybersecurity Roadmap Logo">
+          </div>
+
+          <div class="brand-text">
+            <h2>Cybersecurity Roadmap</h2>
+            <h1>=========<i>Road to Peace</i>=========></h1>
+          </div>
+        </div>
+
+        <div class="controls">
+          <input id="search" class="search" placeholder="Search topics..." />
+          <button id="resetBtn" class="btn-link">Reset</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container main-grid">
+      <!-- left: roadmap visual & tiles -->
+      <section class="left-panel card">
+        <h2 class="section-title">Learning Map</h2>
+
+        <div class="roadmap-wrap">
+          <!-- Optionally replace with a single background image; below is tiles container -->
+          <div id="tiles" class="tiles-grid"></div>
+        </div>
+      </section>
+
+
+
+      <!-- right: quick detail panel -->
+      <aside class="right-panel">
+        <div class="sticky">
+          <div id="detailCard" class="card detail-card empty">
+            <div class="empty-text">
+              <div>Select any topic on the left to see details</div>
+              <div class="muted">Tip: Use the search box in the header to filter topics quickly</div>
+            </div>
+          </div>
+
+          <div class="card quick-links">
+            <div class="small-title">Quick links</div>
+            <div class="links-grid">
+              <a href="https://portswigger.net/web-security" target="_blank">PortSwigger</a>
+              <a href="https://tryhackme.com" target="_blank">TryHackMe</a>
+              <a href="https://owasp.org/www-project-juice-shop/" target="_blank">Juice Shop</a>
+              <a href="https://nmap.org/book/" target="_blank">Nmap Book</a>
+              <a href="https://hackthebox.com" target="_blank">HackTheBox</a>
+              <a href="https://shodan.io" target="_blank">Shodan</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="container footer">
+      <strong><b>KEEP LEARNING | KEEP HUNTING</b></strong>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
