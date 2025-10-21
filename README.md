@@ -59,26 +59,13 @@ To use a custom logo:
 
 1. **Clone or Download**
    ```bash
-   git clone https://github.com/yourusername/cybersecurity-roadmap.git
+   git clone https://github.com/yourusername/Cyber-Security-Roadmap.git
    ```
    or simply download the ZIP.
 
 2. **Run Locally**
    - Double-click `index.html`  
    - It opens directly in your default browser.
-
----
-
-## 🧭 Folder Structure
-```
-/cybersecurity-roadmap
-│
-├── index.html       # Main file
-├── styles.css       # Style
-├── script.js        # JavaScript file
-├── logo.png         # Optional logo (replace with yours)
-└── README.md        # Project documentation
-```
 
 ---
 
