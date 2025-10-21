@@ -161,5 +161,55 @@
     KEEP LEARNING | KEEP HACKING ETHICALLY
   </footer>
 
+  <script>
+(function(){
+  // Unique key for this page (change to match each page, or compute from path)
+  const PAGE_KEY = 'progress_' + (location.pathname || 'homepage');
+
+  // Query all checkboxes inside the checklist area
+  const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"], .topic-details input[type="checkbox"]');
+
+  // Load saved state (object of id -> boolean)
+  let saved = {};
+  try {
+    saved = JSON.parse(localStorage.getItem(PAGE_KEY)) || {};
+  } catch(e) { saved = {}; }
+
+  // If a checkbox has id attribute use it; otherwise assign one
+  checkboxes.forEach((cb, i) => {
+    if (!cb.id) cb.id = `cb_${i}`;
+    // restore state if present
+    if (saved[cb.id] !== undefined) cb.checked = !!saved[cb.id];
+
+    // on change save
+    cb.addEventListener('change', () => {
+      saved[cb.id] = cb.checked;
+      try {
+        localStorage.setItem(PAGE_KEY, JSON.stringify(saved));
+      } catch(e) {
+        console.error('Failed to save progress', e);
+      }
+    });
+  });
+
+  // Optional: function to clear progress for this page
+  window.clearPageProgress = function() {
+    localStorage.removeItem(PAGE_KEY);
+    checkboxes.forEach(cb => cb.checked = false);
+  };
+
+  // Optional: export progress across pages (for user to backup)
+  window.exportProgress = function() {
+    const all = {};
+    for (let k = 0; k < localStorage.length; k++) {
+      const key = localStorage.key(k);
+      if (key && key.startsWith('progress_')) all[key] = JSON.parse(localStorage.getItem(key));
+    }
+    return JSON.stringify(all);
+  };
+})();
+</script>
+
+
 </body>
 </html>
