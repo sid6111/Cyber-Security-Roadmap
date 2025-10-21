@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripting & Automation for Cybersecurity</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #4f46e5;
+      --accent-2: #06b6d4;
+      --border: #e6e7eb;
+      --shadow: 0 6px 20px rgba(15,23,42,0.06);
+      --radius: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    main.topic-details {
+      background: var(--card);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 90%;
+      max-width: 900px;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+    }
+
+    .resources {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-group button {
+      margin: 0.3rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: var(--card);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-group button:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 0.4rem 0;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--accent-2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Scripting & Automation for Cybersecurity</h1>
+    <p class="subtitle">Automate repetitive security tasks using Python and Bash.</p>
+  </header>
+
+  <main class="topic-details">
+    <p>
+      Learn to automate repetitive security tasks using scripting languages. Build your own small tools for scanning, data parsing, and exploitation.
+    </p>
+
+    <h3>Tools</h3>
+    <p>Python, Bash, PowerShell, Git</p>
+
+    <h3>Resources</h3>
+    <div class="resources">
+      <div class="btn-group">
+        <button onclick="window.open('https://tryhackme.com/room/pythonforcybersecurity', '_blank')">Python for Cybersecurity (TryHackMe Rooms)</button>
+        <button onclick="window.open('https://overthewire.org/wargames/', '_blank')">OverTheWire Wargames</button>
+        <button onclick="window.open('https://automatetheboringstuff.com/', '_blank')">Automate the Boring Stuff with Python</button>
+      </div>
+    </div>
+
+    <section class="checklist">
+      <h3>What to Learn ✅</h3>
+      <ul>
+        <li><input type="checkbox"> Python fundamentals (variables, loops, functions)</li>
+        <li><input type="checkbox"> Automating scans using Nmap libraries</li>
+        <li><input type="checkbox"> Writing small vulnerability scanners</li>
+        <li><input type="checkbox"> File handling and log parsing scripts</li>
+        <li><input type="checkbox"> Web requests and API handling</li>
+        <li><input type="checkbox"> Bash scripting for automation and monitoring</li>
+        <li><input type="checkbox"> PowerShell for Windows enumeration</li>
+        <li><input type="checkbox"> Using Git & GitHub for version control</li>
+        <li><input type="checkbox"> Creating custom recon tools</li>
+      </ul>
+    </section>
+
+    <button class="back-btn" onclick="history.back()">⬅ Back to Home</button>
+  </main>
+
+  <footer>
+    KEEP LEARNING | KEEP HUNTING
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIEM & Log Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #4f46e5;
+      --accent-2: #06b6d4;
+      --border: #e6e7eb;
+      --shadow: 0 6px 20px rgba(15,23,42,0.06);
+      --radius: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    main.topic-details {
+      background: var(--card);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 90%;
+      max-width: 900px;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+    }
+
+    .resources {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-group button {
+      margin: 0.3rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: var(--card);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-group button:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 0.4rem 0;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--accent-2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SIEM & Log Analysis</h1>
+    <p class="subtitle">Monitor, detect, and respond to cyber threats using centralized log analytics.</p>
+  </header>
+
+  <main class="topic-details">
+    <p>Learn how Security Information and Event Management (SIEM) systems collect, correlate, and analyze logs from multiple sources to detect security incidents effectively.</p>
+
+    <h3>Tools</h3>
+    <p>Splunk, Wazuh, ELK Stack, Graylog, QRadar, Azure Sentinel</p>
+
+    <h3>Resources</h3>
+    <div class="resources">
+      <div class="btn-group">
+        <button onclick="window.open('https://www.splunk.com/en_us/training.html', '_blank')">Splunk Training</button>
+        <button onclick="window.open('https://documentation.wazuh.com/', '_blank')">Wazuh Docs</button>
+        <button onclick="window.open('https://www.elastic.co/what-is/elk-stack', '_blank')">Elastic Stack Overview</button>
+      </div>
+    </div>
+
+    <section class="checklist">
+      <h3>What to Learn ✅</h3>
+      <ul>
+        <li><input type="checkbox"> Fundamentals of log management</li>
+        <li><input type="checkbox"> Understanding event sources (firewalls, IDS, endpoints)</li>
+        <li><input type="checkbox"> Log collection and normalization</li>
+        <li><input type="checkbox"> Correlation rules and alert tuning</li>
+        <li><input type="checkbox"> Creating dashboards and visualizations</li>
+        <li><input type="checkbox"> Detecting suspicious patterns in data</li>
+        <li><input type="checkbox"> Integration with threat intelligence feeds</li>
+        <li><input type="checkbox"> SIEM performance optimization</li>
+        <li><input type="checkbox"> Hands-on labs with Wazuh or Splunk</li>
+      </ul>
+    </section>
+
+    <button class="back-btn" onclick="history.back()">⬅ Back to Home</button>
+  </main>
+
+</body>
+</html>

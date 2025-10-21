@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Security & Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #4f46e5;
+      --accent-2: #06b6d4;
+      --border: #e6e7eb;
+      --shadow: 0 6px 20px rgba(15,23,42,0.06);
+      --radius: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    main.topic-details {
+      background: var(--card);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 90%;
+      max-width: 900px;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+    }
+
+    .resources {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-group button {
+      margin: 0.3rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: var(--card);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-group button:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 0.4rem 0;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--accent-2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-[var(--bg)] text-gray-800 font-sans">
+
+  <header class="text-center py-10 bg-white shadow-md rounded-2xl mx-6 my-8">
+    <h1 class="text-4xl font-bold text-[var(--accent)] mb-2">Network Security & Analysis</h1>
+    <p class="subtitle text-[var(--muted)] text-lg">Master how data travels across networks — from IPs to protocols.</p>
+  </header>
+
+  <main class="topic-details max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+    <p class="text-lg mb-6 leading-relaxed">
+      Understand how data travels across networks, identify threats, and secure network infrastructure. Learn traffic analysis and detection of anomalies.
+    </p>
+
+    <h3 class="text-2xl font-semibold text-[var(--accent)] mb-2">Tools</h3>
+    <p class="mb-6">Wireshark, Tcpdump, Nmap, Zeek, Snort, Suricata</p>
+
+    <h3 class="text-2xl font-semibold text-[var(--accent)] mb-2">Resources</h3>
+    <div class="resources mb-8">
+      <div class="btn-group flex flex-wrap gap-3">
+        <button class="px-5 py-2 bg-[var(--accent)] text-white rounded-xl shadow hover:bg-[var(--accent-2)] transition" onclick="window.open('https://www.wireshark.org/docs/', '_blank')">Wireshark Official Docs</button>
+        <button class="px-5 py-2 bg-[var(--accent)] text-white rounded-xl shadow hover:bg-[var(--accent-2)] transition" onclick="window.open('https://www.practicalnetworking.net/', '_blank')">Practical Networking</button>
+        <button class="px-5 py-2 bg-[var(--accent)] text-white rounded-xl shadow hover:bg-[var(--accent-2)] transition" onclick="window.open('https://cyberdefenders.org/', '_blank')">CyberDefenders Blue Labs</button>
+      </div>
+    </div>
+
+    <section class="checklist mb-10">
+      <h3 class="text-2xl font-semibold text-[var(--accent)] mb-4">What to Learn ✅</h3>
+      <ul class="space-y-2">
+        <li><label><input type="checkbox" class="mr-2">Network basics: OSI & TCP/IP models</label></li>
+        <li><label><input type="checkbox" class="mr-2">IP addressing, subnetting, and routing</label></li>
+        <li><label><input type="checkbox" class="mr-2">Packet analysis with Wireshark</label></li>
+        <li><label><input type="checkbox" class="mr-2">Network scanning with Nmap</label></li>
+        <li><label><input type="checkbox" class="mr-2">Detecting DoS/DDoS attacks</label></li>
+        <li><label><input type="checkbox" class="mr-2">Firewall configuration basics</label></li>
+        <li><label><input type="checkbox" class="mr-2">IDS/IPS (Snort, Suricata)</label></li>
+        <li><label><input type="checkbox" class="mr-2">VPNs, proxies, and tunneling</label></li>
+        <li><label><input type="checkbox" class="mr-2">Network log analysis and alerts</label></li>
+      </ul>
+    </section>
+
+    <button class="back-btn px-6 py-3 bg-[var(--accent-2)] text-white rounded-2xl shadow hover:bg-[var(--accent)] transition" onclick="history.back()">⬅ Back to Home</button>
+  </main>
+
+</body>
+</html>

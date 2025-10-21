@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Roadmap</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #4f46e5;
+      --accent-2: #06b6d4;
+      --border: #e6e7eb;
+      --shadow: 0 6px 20px rgba(15,23,42,0.06);
+      --radius: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      /*background: #00bfff;*/
+      color: #fff;
+      box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+      transition: all 0.3s ease;
+    }
+
+    .card h3 {
+      margin: 0.8rem 0 0.5rem 0;
+      color: var(--accent);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .btn-group button {
+      margin: 0.3rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: var(--card);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* centers buttons horizontally */
+      gap: 0.6rem; /* optional: adds space between buttons */
+    }
+
+    .btn-group button:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .search-container {
+  text-align: center;
+  margin: 1.5rem 0 2rem 0;
+}
+
+#searchInput {
+  width: 60%;
+  max-width: 500px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+#searchInput:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  border-radius: 50%; /* makes it a perfect circle */
+  object-fit: cover;  /* ensures image fits nicely */
+  display: block;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00bfff, 0 0 50px #00bfff;
+}
+
+.platform-links {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #0a0a0a;
+  border-top: 2px solid #00ffea;
+  box-shadow: 0 -5px 20px rgba(0, 255, 234, 0.2);
+}
+
+.platform-links h2 {
+  color: #00ffea;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 10px #00ffea;
+}
+
+.platform-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.platform-links a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid #00ffea;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.3);
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.platform-links a:hover {
+  background: #00ffea;
+  color: #000;
+  box-shadow: 0 0 25px #00ffea, 0 0 50px #00ffea;
+  transform: translateY(-3px);
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="Cybersecurity Roadmap Logo" class="logo" />
+    <h1>Cybersecurity Roadmap</h1>
+    <p class="subtitle">Explore every domain of cybersecurity — step by step 🚀</p>
+  </header>
+
+  <div class="search-container">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search topics..." 
+      onkeyup="filterTopics()" 
+    />
+  </div>
+
+  <main>
+    <a href="websecurity.html">
+      <div class="card">
+        <h3>Web / App Security</h3>
+        <p>Learn how hackers exploit web applications and how to defend them.</p>
+      </div>
+    </a>
+
+    <a href="forensic.html">
+      <div class="card">
+        <h3>Digital Forensics</h3>
+        <p>Investigate cybercrimes and uncover hidden evidence from devices.</p>
+      </div>
+    </a>
+
+    <a href="network.html">
+      <div class="card">
+        <h3>Network Security & Analysis</h3>
+        <p>Understand, monitor, and secure networks from real-world threats.</p>
+      </div>
+    </a>
+
+    <a href="scripting.html">
+      <div class="card">
+        <h3>Scripting & Automation</h3>
+        <p>Automate security workflows using Python, Bash, and PowerShell.</p>
+      </div>
+    </a>
+
+    <a href="offensive.html">
+      <div class="card">
+        <h3>Offensive Security / Pentesting</h3>
+        <p>Master ethical hacking tools and exploit systems like a pro hacker.</p>
+      </div>
+    </a>
+
+    <a href="cryptography.html">
+      <div class="card">
+        <h3>Cryptography & Encryption</h3>
+        <p>Learn modern crypto primitives, key exchange and secure hashing.</p>
+      </div>
+    </a>
+
+    <a href="cyberdefence.html">
+      <div class="card">
+        <h3>Cyber Defense & Blue Teaming</h3>
+        <p>Detect, defend, and respond to cyber threats like a pro defender.</p>
+      </div>
+    </a>
+
+    <a href="incidenceresponse.html">
+      <div class="card">
+        <h3>Incident Response & Threat Hunting</h3>
+        <p>Identify, contain, and eradicate incidents using structured playbooks.</p>
+      </div>
+    </a>
+
+    <a href="malware.html">
+      <div class="card">
+        <h3>Malware Analysis & Reverse Engineering</h3>
+        <p>Dissect malicious binaries, understand payloads and build IOCs.</p>
+      </div>
+    </a>
+
+    <a href="siem.html">
+      <div class="card">
+        <h3>SIEM & Log Analysis</h3>
+        <p>Collect, correlate and analyse logs to detect security incidents in real time.</p>
+      </div>
+    </a>
+
+    <a href="socialengineering.html">
+      <div class="card">
+        <h3>Social Engineering & Phishing</h3>
+        <p>Understand human-targeted attacks and simulated phishing defenses.</p>
+      </div>
+    </a>
+
+    <a href="bugbounty.html">
+      <div class="card">
+        <h3>Bug Bounty & Vulnerability Hunting</h3>
+        <p>Find Bugs/Loopholes in the systems and get rewarded.</p>
+      </div>
+    </a>
+  </main>
+
+  <section class="platform-links">
+    <h2>⚔️ Platforms & Labs</h2>
+    <div class="platform-container">
+      <a href="https://tryhackme.com" target="_blank">TryHackMe</a>
+      <a href="https://www.hackthebox.com" target="_blank">Hack The Box</a>
+      <a href="https://portswigger.net/web-security" target="_blank">PortSwigger Labs</a>
+      <a href="https://cyberdefenders.org" target="_blank">CyberDefenders</a>
+      <a href="https://blue.team" target="_blank">Blue Team Labs</a>
+      <a href="https://ctftime.org" target="_blank">CTFtime</a>
+    </div>
+  </section>
+
+
+
+
+  <footer>
+    BUILT BY SID ⚡ | CYBERSECURITY ROADMAP
+  </footer>
+
+  <script>
+    function filterTopics() {
+      const input = document.getElementById('searchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (text.includes(input)) {
+        card.parentElement.style.display = 'block'; // shows the <a> wrapper
+      } else {
+        card.parentElement.style.display = 'none';
+      }
+    });
+    }
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Engineering - Cybersecurity Learning Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #4f46e5;
+      --accent-2: #06b6d4;
+      --border: #e6e7eb;
+      --shadow: 0 6px 20px rgba(15,23,42,0.06);
+      --radius: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    main.topic-details {
+      background: var(--card);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 90%;
+      max-width: 900px;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+    }
+
+    .resources {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-group button {
+      margin: 0.3rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: var(--card);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-group button:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 0.4rem 0;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--accent-2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+    <h1>Social Engineering & Phishing</h1>
+    <p class="subtitle">Learn the human side of security — how attackers manipulate people and how to defend against it.</p>
+  </header>
+
+  <main class="topic-details">
+    <p>Social engineering targets the human element. Study attack techniques (phishing, vishing, pretexting), psychology of persuasion, and practical defenses such as awareness programs, secure culture, and simulated phishing campaigns.</p>
+
+    <h3>Tools & Platforms</h3>
+    <p>Gophish, King Phisher, Social-Engineer Toolkit (SET), PhishTool, Mailslurper (testing), Browser DevTools (recon)</p>
+
+    <h3>Resources</h3>
+    <div class="resources">
+      <div class="btn-group">
+        <button onclick="window.open('https://gophish.io', '_blank')">GoPhish</button>
+        <button onclick="window.open('https://github.com/trustedsec/social-engineer-toolkit', '_blank')">Social-Engineer Toolkit (SET)</button>
+        <button onclick="window.open('https://www.social-engineer.org/', '_blank')">Social-Engineer.Org</button>
+        <button onclick="window.open('https://phishtool.io', '_blank')">PhishTool</button>
+        <button onclick="window.open('https://unit42.paloaltonetworks.com/phishing-attacks/', '_blank')">Palo Alto Unit42: Phishing</button>
+      </div>
+      <p class="example-note">Open any resource in a new tab. Use tools in test labs or on consenting targets only — never misuse them.</p>
+    </div>
+
+    <section class="checklist">
+      <h3>What to Learn ✅</h3>
+      <ul>
+        <li><input type="checkbox"> Principles of social engineering & persuasion (Cialdini's principles)</li>
+        <li><input type="checkbox"> Types of phishing: email, spear-phishing, whaling</li>
+        <li><input type="checkbox"> Vishing (voice phishing) and smishing (SMS phishing)</li>
+        <li><input type="checkbox"> Pretexting and impersonation techniques</li>
+        <li><input type="checkbox"> Reconnaissance: OSINT for social engineering</li>
+        <li><input type="checkbox"> Building believable phishing pages (for simulations)</li>
+        <li><input type="checkbox"> Running phishing simulations with GoPhish / King Phisher</li>
+        <li><input type="checkbox"> Metrics & reporting: click rates, credential submissions, awareness KPIs</li>
+        <li><input type="checkbox"> Defensive measures: email filtering, DMARC/DKIM/SPF, MFA, training</li>
+        <li><input type="checkbox"> Legal & ethical constraints — red team rules of engagement</li>
+      </ul>
+    </section>
+
+    <h3>Suggested Practical Exercises</h3>
+    <ul>
+      <li>Set up a local GoPhish instance and create a safe test campaign (use mock targets you control).</li>
+      <li>Analyze a phishing sample: inspect HTML, resources, and infrastructure used.</li>
+      <li>Design an awareness micro-training and measure change in behavior after a simulated phish.</li>
+    </ul>
+
+    <button class="back-btn" onclick="history.back()">⬅ Back to Home</button>
+  </main>
+
+  <footer>
+    BUILT BY SID ⚡ | SOCIAL ENGINEERING
+  </footer>
+
+</body>
+</html>
